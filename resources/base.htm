@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://unpkg.com/htmx.org@2.0.3" integrity="sha384-0895/pl2MU10Hqc6jd4RvrthNlDiE9U1tWmX7WRESftEDRosgxNsQG/Ze9YMRzHq" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/2ba81dd091.js" crossOrigin="anonymous"></script>
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
+        >
+        <link rel="stylesheet" href="/static/css/global.css">
+        <script src="/static/js/global.js"></script>
+        <script>
+            htmx.config.selfRequestsOnly = false;
+        </script>
+        <title>{% block title %}untitled{% endblock%} | DIPPINGSAUCE</title>
+        
+        {% block head %} {% endblock %}
+    </head>
+    <body class="has-navbar-fixed-top">
+        <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+              <a class="navbar-item is-primary" href="https://www.dippingsauce.net">
+                    <p class="title is-4">DIPPINGSAUCE.NET</p>          
+              </a>
+          
+              <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
+            </div>
+          
+            <div id="navbarBasicExample" class="navbar-menu">
+              <div class="navbar-start">
+                {% link '/', loc, 'Home' %}
+
+                {% link '/recipes.htm', loc, 'Recipes' %}
+
+                {% link '/reviews.htm', loc, 'Reviews' %}
+              </div>
+            </div>
+          </nav>
+        <main>
+            {% block content %} {% endblock %}
+        <main>
+    </body>
+</html>

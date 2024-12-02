@@ -1,0 +1,25 @@
+:root {
+    --bulma-primary-h: 184deg;
+    --bulma-primary-s: 26%;
+    --bulma-primary-l: 51%;
+    --bulma-link-h: 184deg;
+    --bulma-link-s: 26%;
+    --bulma-link-l: 51%;
+    --bulma-info-h: 184deg;
+    --bulma-info-s: 85%;
+    --bulma-info-l: 40%;
+    --bulma-danger-h: 335deg;
+    --bulma-danger-s: 64%;
+    --bulma-danger-l: 48%;
+    --bulma-body-color: #F0EEED;
+}
+
+.card {
+    --bulma-card-color: #F0EEED;
+    --bulma-card-background-color: #332C39;
+    --bulma-card-footer-border-top: 1px solid #609EA2;
+}
+
+li {
+    list-style-type: none;
+}

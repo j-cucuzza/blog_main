@@ -1,0 +1,48 @@
+{% extends "base.htm" %}
+
+{% block title %} Recipes {% endblock %}
+
+{% block content %}
+    <br />
+    <div class="container is-max-desktop">
+    <span hx-get="https://www.dippingsauce.net/api/recipes/tags/html" hx-trigger="load" hx-target="#tag" hx-swap="innerHTML"></span>
+        <nav class="level" style="margin: 0rem 1rem">
+            <div class="level-item">
+                <input class="input is-rounded" type="text" placeholder="Search" disabled/>
+            
+                <!-- <div class="control">
+                    <label class="radio">
+                    <input type="radio" name="answer" />
+                        Name
+                    </label>
+                    <label class="radio">
+                    <input type="radio" name="answer" />
+                        Ingredient
+                    </label>
+                </div> -->
+            </div>
+            <div class="level-item">
+                <div class="select">
+                    <form>
+                        <select id="tag"
+                                name="tag"
+                                hx-get="https://www.dippingsauce.net/api/recipes/all/html"
+                                hx-target=".grid"
+                                hx-trigger="load, change"
+                                hx-swap="innerHTML">
+                                <option value="all">Select Filter</option>
+                        </select>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <br />
+    <div class="container is-max-desktop">
+        <div class="fixed-grid has-3-cols has-1-cols-mobile">
+            <div id="#recipe-list" class="grid" data-theme="dark" style="margin: 0rem 1rem">
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

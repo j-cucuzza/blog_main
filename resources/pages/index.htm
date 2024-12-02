@@ -1,0 +1,71 @@
+{% extends "base.htm" %}
+
+{% block title %} Home {% endblock %}
+
+{% block content %}
+<section class="hero is-primary">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+        <p class="title is-1">Hi, I'm Alex Cucuzza</p>
+        <p class="subtitle">Full Stack Developer</p>
+    </div>
+    </div>
+</section>
+<br />
+<div class="container is-max-desktop">
+    <div class="columns">
+        <div class="column is-one-third">
+            <div class="card" style="margin: 0rem 1rem">
+                <header class="card-header">
+                    <p class="card-header-title">About Me</p>
+                    <div class="card-header-icon" aria-label="more options">
+                        <span class="icon">
+                            <i class="fa-solid fa-code"></i>
+                        </span>
+                    </div>
+                </header>
+                <div class="card-content">
+                    <div class="content">
+                        <div>
+                            <p>Full Stack Developer with over a year of experience at a Fortune 100 company.</p>
+                            <p>B.S.C.S. Computer Science, Emphasis in Data Science, Minor in Mathematics for Engineers</p>
+                        </div>
+                    <br />
+                  </div>
+                </div>
+                <footer class="card-footer">
+                    <a href="https://github.com/j-cucuzza" class="card-footer-item">
+                        <span class="icon">
+                            <i class="fa-brands fa-github-square fa-2x"></i>
+                        </span>
+                    </a>
+                  <a href="https://www.linkedin.com/in/justin-cucuzza/" class="card-footer-item">
+                        <span class="icon">
+                            <i class="fa-brands fa-linkedin fa-2x"></i></a>
+                        </span>
+                </footer>
+              </div>
+        </div>
+        <div class="column">
+            <div class="content" style="margin: 0rem 1rem">
+            <div class="title is-6">About This Site</div>
+            <p>
+                This site is dedicated to compiling various recipes to easily share them.
+                As a bonus, this website will also serve to store reviews of different 
+                restaurants in Chicago (again, for sharing). Eventually, the final (for now)
+                piece of this site will be a place to put up some writing, blog-esque style. 
+            </p>
+            <div class="title is-6">The Technical Stuff</div>
+            <p>
+                For the technical users, this website was created using the Jinja template 
+                engine with Python. You can view the <a href="https://github.com/j-cucuzza/blog_main">github repo for it here</a>. The backend is
+                a SQLite database connected to a FastAPI (Python) server <a href="https://github.com/j-cucuzza/blog_backend">(repo here)</a>. There is 
+                a separate admin panel made with Next.js, which you can view the <a href="https://github.com/j-cucuzza/blog_admin_panel">repo for here</a>.
+                You can <a href="">read about why I did it this way here</a> (not yet, though).
+            </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
