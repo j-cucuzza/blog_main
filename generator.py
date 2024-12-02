@@ -8,7 +8,6 @@ class LinkExtension(StandaloneTag):
     tags = {'link'}
 
     def render(self, path='/index.htm', loc='/index.htm', title='home'):
-        print(path, loc)
         if path.split('/')[1] == loc:
             return '<a style="pointer-events: none;" class="navbar-item"><span class="title is-5">' \
                 + title + '</span></a>'
