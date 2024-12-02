@@ -11,7 +11,6 @@
     --bulma-danger-h: 335deg;
     --bulma-danger-s: 64%;
     --bulma-danger-l: 48%;
-    --bulma-body-color: #F0EEED;
 }
 
 .card {
@@ -22,4 +21,14 @@
 
 li {
     list-style-type: none;
+}
+
+@media (prefers-color-scheme: dark){
+    :root {
+        --bulma-body-color: #F0EEED;
+    }
+}
+
+@media (prefers-color-scheme: light){
+
 }
