@@ -19,10 +19,6 @@
     --bulma-card-footer-border-top: 1px solid #609EA2;
 }
 
-li {
-    list-style-type: none;
-}
-
 @media (prefers-color-scheme: dark){
     :root {
         --bulma-body-color: #F0EEED;
