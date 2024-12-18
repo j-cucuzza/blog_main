@@ -19,3 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   
   });
+
+const hideMessage = () => {
+  document.getElementById('message').style.display = 'none'
+}

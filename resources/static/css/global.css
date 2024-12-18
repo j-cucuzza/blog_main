@@ -28,3 +28,9 @@
 @media (prefers-color-scheme: light){
 
 }
+
+.main-content {
+    display: "flex";
+    min-height: "100%";
+    flex-direction: "column";
+}

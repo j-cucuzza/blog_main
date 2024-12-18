@@ -16,7 +16,6 @@ document.body.addEventListener("htmx:afterSwap", function(event) {
     const headers = event.detail.xhr.getAllResponseHeaders()
     const title = event.detail.xhr.getResponseHeader("x-page-title")
     const description = event.detail.xhr.getResponseHeader("x-page-description")
-    console.log(headers)
 
     if (title) {
         document.title = title + " | DIPPINGSAUCE"
@@ -25,3 +24,8 @@ document.body.addEventListener("htmx:afterSwap", function(event) {
     let metaDescription = document.querySelector('meta[name="description"]')
     metaDescription.setAttribute("content", description)
 })
+
+const shareRecipe = (name) => {
+    navigator.clipboard.writeText("Check out this recipe for " + name + ": " + window.location.href)
+    document.getElementById('share-button').innerHTML = "Copied to Clipboard!";
+}

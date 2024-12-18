@@ -6,6 +6,24 @@
     <br />
     <div class="container is-max-desktop">
     <span hx-get="https://www.dippingsauce.net/api/recipes/tags/html" hx-trigger="load" hx-target="#tag" hx-swap="innerHTML"></span>
+        <article id="message" class="message is-danger">
+            <div class="message-header">
+            <p>Info</p>
+            <button class="delete" aria-label="delete" onclick="hideMessage()"></button>
+            </div>
+            <div class="message-body">
+                <p>
+                    Just because an recipe has the "Image Not Found" in place of a picture, doesn't mean it's broken - 
+                    <strong>I just haven't taken a picture of it yet</strong>.
+                </p>
+                <p>
+                    Majority, if not all, of these recipes will be focused on high-protein, high-fiber, low-calorie. 
+                    If you need more calories (for bulking, or something!), you can modify some of these recipes by 
+                    substituting anything non-fat (n.f.), low-fat (l.f.), reduced fat (r.f.), etc with full-fat products.
+                    Or basically, substitute anything low-calorie with regular-calorie versions.
+                </p>
+            </div>
+        </article>
         <nav class="level" style="margin: 0rem 1rem">
             <div class="level-item">
                 <input class="input is-rounded" type="text" placeholder="Search" disabled/>
@@ -39,7 +57,7 @@
     </div>
     <br />
     <div class="container is-max-widescreen">
-        <div class="fixed-grid has-1-cols-mobile has-2-cols">
+        <div class="fixed-grid has-1-cols-mobile has-2-cols-tablet has-3-cols-desktop">
             <div id="#recipe-list" class="grid" data-theme="dark" style="margin: 0rem 1rem">
 
             </div>

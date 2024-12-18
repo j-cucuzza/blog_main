@@ -13,6 +13,11 @@
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
         >
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+
         <link rel="stylesheet" href="/static/css/global.css">
         <script src="/static/js/global.js"></script>
         <script>
@@ -47,8 +52,31 @@
               </div>
             </div>
           </nav>
-        <main>
+        <main class="main-content">
             {% block content %} {% endblock %}
         <main>
+          <br />
+          <br />
+          <footer class="footer">
+            <div class="content has-text-centered">
+                <p>
+                    <div class="container is-max-tablet">
+                    <p>
+                        Site by&nbsp;<a href="https://dippingsauce.net">Alex</a>.
+                    </p>
+                    <a href="https://github.com/j-cucuzza" class="icon mx-3">
+                        <i class="fa-brands fa-github-square fa-2x"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/justin-cucuzza/" class="icon mx-3">
+                        <i class="fa-brands fa-linkedin fa-2x"></i>
+                    </a>
+                    </div>
+                </p>
+                {% block footer %} {% endblock %}
+                <p class=" is-size-7 ">
+                    Favicon <a href="https://fonts.gstatic.com/s/protestriot/v2/d6lPkaOxWMKm7TdezXFmpkrM1_JgjmRpOA.ttf">Font Source</a>.
+                </p>
+            </div>
+        </footer>
     </body>
 </html>
