@@ -6,7 +6,7 @@
     <br />
     <div class="container is-max-desktop">
     <span hx-get="https://www.dippingsauce.net/api/recipes/tags/html" hx-trigger="load" hx-target="#tag" hx-swap="innerHTML"></span>
-        <article id="message" class="message is-danger">
+        <article id="message" class="message is-danger" style="margin: 0rem 1rem">
             <div class="message-header">
             <p>Info</p>
             <button class="delete" aria-label="delete" onclick="hideMessage()"></button>
@@ -24,6 +24,7 @@
                 </p>
             </div>
         </article>
+        <br />
         <nav class="level" style="margin: 0rem 1rem">
             <div class="level-item">
                 <input class="input is-rounded" type="text" placeholder="Search" disabled/>
