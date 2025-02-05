@@ -11,7 +11,7 @@
         <span hx-get="https://www.dippingsauce.net/api/reviews/cuisines/html" hx-trigger="load" hx-target="#cuisine" hx-swap="innerHTML"></span>
         <br />
         <div class="columns is-flex-direction-column-mobile is-1">
-            <div class="column left-column is-two-fifths">
+            <div class="column left-column is-half">
                 <nav class="level" style="margin: 0rem 1rem">
                     <div class="level-item">
                         <input class="input is-rounded" type="text" placeholder="Search" disabled/>
@@ -32,6 +32,26 @@
                     </div>
                 </nav>
                 <br />
+                <article class="message" style="margin: 0rem 1rem">
+                    <div class="message-header">
+                        <p>Legend</p>
+                    </div>
+                    <div class="message-body">
+                        <nav class="level is-mobile">
+                            <div class="level-item">
+                                <span key={i} class="icon has-text-primary">
+                                    <i class="fa-solid fa-check"></i>
+                                </span> Visited
+                            </div>
+                            <div class="level-item">
+                                <span key={i} class="icon has-text-danger">
+                                    <i class="fa-solid fa-ban"></i>
+                                </span> Not Visited
+                            </div>
+                        </nav>
+                    </div>
+                </article>
+                <br />
                 <div class="content" style="margin: 0rem 1rem">
                     This list has two purposes:
                     <ol>
@@ -46,7 +66,7 @@
             </div>
             <div class="column right-column" style="overflow-y: auto;">
                 <div class="container is-max-widescreen">
-                    <div class="fixed-grid has-1-cols-mobile has-2-cols-tablet">
+                    <div class="fixed-grid has-1-cols">
                         <div id="#review-list" class="grid" data-theme="dark" style="margin: 0rem 1rem">
 
                         </div>

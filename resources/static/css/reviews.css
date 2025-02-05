@@ -14,7 +14,7 @@ html, body {
 @media (min-width: 769px) {
     .column.left-column {
         position: sticky;
-        top: 3.25rem;
+        top: 6rem;
         overflow-y: auto;
         align-self: flex-start;
     }
