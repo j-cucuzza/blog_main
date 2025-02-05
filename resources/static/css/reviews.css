@@ -1,0 +1,21 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.columns {
+    align-items: flex-start;
+}
+
+.column.right-column {
+    overflow: auto;
+}
+
+@media (min-width: 769px) {
+    .column.left-column {
+        position: sticky;
+        top: 3.25rem;
+        overflow-y: auto;
+        align-self: flex-start;
+    }
+}

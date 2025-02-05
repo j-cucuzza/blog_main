@@ -2,49 +2,58 @@
 
 {% block title %} Reviews {% endblock %}
 
+{% block head %}
+<link rel="stylesheet" href="/static/css/reviews.css">
+{% endblock %}
 {% block content %} 
     <br />
     <div class="container is-max-desktop">
         <span hx-get="https://www.dippingsauce.net/api/reviews/cuisines/html" hx-trigger="load" hx-target="#cuisine" hx-swap="innerHTML"></span>
-            <article id="message" class="message is-danger" style="margin: 0rem 1rem">
-                <div class="message-header">
-                <p>Info</p>
-                <button class="delete" aria-label="delete" onclick="hideMessage()"></button>
-                </div>
-                <div class="message-body">
-                    <p>
-                        Please excuse the mess, this portion of the site is under development.
-                    </p>
-                </div>
-            </article>
-            <br />
-            <nav class="level" style="margin: 0rem 1rem">
-                <div class="level-item">
-                    <input class="input is-rounded" type="text" placeholder="Search" disabled/>
-                </div>
-                <div class="level-item">
-                    <div class="select">
-                        <form>
-                            <select id="cuisine"
-                                    name="cuisine"
-                                    hx-get="https://www.dippingsauce.net/api/reviews/all/html"
-                                    hx-target=".grid"
-                                    hx-trigger="load, change"
-                                    hx-swap="innerHTML">
-                                    <option value="all">Select Filter</option>
-                            </select>
-                        </form>
-                    </div>
-                </div>
-            </nav>
-        </div>
         <br />
-        <div class="container is-max-widescreen">
-            <div class="fixed-grid has-1-cols-mobile has-2-cols-tablet">
-                <div id="#review-list" class="grid" data-theme="dark" style="margin: 0rem 1rem">
-
+        <div class="columns is-flex-direction-column-mobile is-1">
+            <div class="column left-column is-two-fifths">
+                <nav class="level" style="margin: 0rem 1rem">
+                    <div class="level-item">
+                        <input class="input is-rounded" type="text" placeholder="Search" disabled/>
+                    </div>
+                    <div class="level-item">
+                        <div class="select">
+                            <form>
+                                <select id="cuisine"
+                                        name="cuisine"
+                                        hx-get="https://www.dippingsauce.net/api/reviews/all/html"
+                                        hx-target=".grid"
+                                        hx-trigger="load, change"
+                                        hx-swap="innerHTML">
+                                        <option value="all">Select Filter</option>
+                                </select>
+                            </form>
+                        </div>
+                    </div>
+                </nav>
+                <br />
+                <div class="content" style="margin: 0rem 1rem">
+                    This list has two purposes:
+                    <ol>
+                        <li>give recommendations for all the restaurants we visit in Chicago 
+                            (other cities later, maybe!)</li>
+                        <li>maintain a growing list of restaurants we WANT to go and visit, 
+                            so we never have to struggle to think of where to go.</li>
+                    </ol>
+                Eventually, I hope to start writing <strong>full</strong> reviews 
+                for these restaurants. For now, they will just have a short, concise blurb.
                 </div>
             </div>
+            <div class="column right-column" style="overflow-y: auto;">
+                <div class="container is-max-widescreen">
+                    <div class="fixed-grid has-1-cols-mobile has-2-cols-tablet">
+                        <div id="#review-list" class="grid" data-theme="dark" style="margin: 0rem 1rem">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 {% endblock %}
