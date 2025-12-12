@@ -30,7 +30,7 @@
     <body class="has-navbar-fixed-top">
         <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
-              <a class="navbar-item is-primary" href="https://www.dippingsauce.net">
+              <a disabled class="navbar-item is-primary" href="">
                     <p class="title is-4">DIPPINGSAUCE.NET</p>          
               </a>
           
@@ -44,9 +44,7 @@
           
             <div id="navbarBasicExample" class="navbar-menu">
               <div class="navbar-start">
-                {% link '/index.htm', loc, 'Home' %}
-
-                {% link '/recipes.htm', loc, 'Recipes' %}
+                {% link '/index.htm', loc, 'Recipes' %}
 
                 {% link '/reviews.htm', loc, 'Reviews' %}
               </div>
@@ -62,19 +60,16 @@
                 <p>
                     <div class="container is-max-tablet">
                     <p>
-                        Site by&nbsp;<a href="https://dippingsauce.net">Alex</a>.
+                        Site by&nbsp;<a href="https://dippingsauce.net">Chai</a>.
                     </p>
-                    <a href="https://github.com/j-cucuzza" class="icon mx-3">
-                        <i class="fa-brands fa-github-square fa-2x"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/justin-cucuzza/" class="icon mx-3">
-                        <i class="fa-brands fa-linkedin fa-2x"></i>
+                    <a href="" class="icon mx-3">
+                        <i class="fa-solid fa-paw fa-2x"></i>
                     </a>
                     </div>
                 </p>
                 {% block footer %} {% endblock %}
                 <p class=" is-size-7 ">
-                    Favicon <a href="https://fonts.gstatic.com/s/protestriot/v2/d6lPkaOxWMKm7TdezXFmpkrM1_JgjmRpOA.ttf">Font Source</a>.
+                    Favicon <a href="https://github.com/twitter/twemoji/blob/master/assets/svg/1f98a.svg"> Source</a>.
                 </p>
             </div>
         </footer>
