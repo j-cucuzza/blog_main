@@ -13,27 +13,29 @@
         <div class="columns is-flex-direction-column-mobile is-1">
             <div class="column left-column is-half">
                 <nav class="level" style="margin: 0rem 1rem">
-                    <div class="level-item">
-                        <div class="field has-addons">
-                          <p class="control">
-                            <input 
-                                class="input"
-                                id="search" 
-                                name="query"
-                                type="text" 
-                                placeholder="Name or Neighborhood"
-                            />
-                          </p>
-                          <p class="control">
-                            <button 
-                                class="button"
-                                hx-get="https://www.dippingsauce.net/api/reviews/search/html"
-                                hx-target=".grid"
-                                hx-include="#search"
-                                hx-swap="innerHTML"
-                            >Search</button>
-                          </p>
-                        </div>
+                    <div class="level-item">  
+                        <form>
+                            <div class="field has-addons">
+                                <p class="control">
+                                    <input 
+                                        class="input"
+                                        id="search" 
+                                        name="query"
+                                        type="text" 
+                                        placeholder="Name or Neighborhood"
+                                    />
+                                </p>
+                                <p class="control">
+                                    <button 
+                                        class="button"
+                                        hx-get="https://www.dippingsauce.net/api/reviews/search/html"
+                                        hx-target=".grid"
+                                        hx-include="#search"
+                                        hx-swap="innerHTML"
+                                    >Search</button>
+                                </p>
+                            </div>
+                        </form>
                     </div>
                     <div class="level-item">
                         <div class="select">
